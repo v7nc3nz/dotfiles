@@ -1,4 +1,4 @@
-" Specify a directory for plugins
+"Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -17,12 +17,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 
+
 "themes
 Plug 'morhetz/gruvbox'
 Plug 'skbolton/embark'
-Plug 'drewtempelmeyer/palenight.vim'
 
-" Initialize plugin system
+ "Initialize plugin system
 call plug#end()
 
 inoremap jk <ESC>
@@ -61,13 +61,11 @@ set expandtab
 " Line wrapping
 set linebreak
 set showbreak=▹
-
-"colorscheme gruvbox
+let g:gruvbox_italic = 1
 colorscheme embark
-"Plug 'drewtempelmeyer/palenight.vim'
-let g:lightline = { 'colorscheme': 'palenight' }
+highlight Comment cterm=italic
 
-
+"""""""""""""""""""""""""""""""
 
 " coc config
 let g:coc_global_extensions = [
@@ -111,13 +109,22 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" open new tab ctrl+t
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-Delete> :bd<CR>
+
+" save file with ctrl+s
+nnoremap <C-s> :w<CR>
+map <C-Q> :wq<CR>
+
 
 " Airline config
 let g:airline_powerline_fonts = 1
 "let g:airline_section_b = ''
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='powerlineish' " <theme> is a valid theme name
+let g:airline_theme='minimalist' " <theme> is a valid theme name
 let g:airline_detect_modified=1
 let g:airline_detect_spelllang=1
 
