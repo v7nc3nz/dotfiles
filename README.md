@@ -1,1 +1,3 @@
-dot files
+Dot files
+- tmux
+- vim
