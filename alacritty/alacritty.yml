@@ -1,5 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-# 
+
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -82,7 +82,6 @@ scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
   history: 5000
-
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
@@ -224,8 +223,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x292d3e'
-    foreground: '0xbbc5ff'
+    background: '0x262626'
+    foreground: '0xc0b18b'
 
     # Bright and dim foreground colors
     #
@@ -569,6 +568,7 @@ background_opacity: 1.0
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
+LC_CTYPE: "UTF-8"
 key_bindings:
     # (Windows, Linux, and BSD only)
   - { key: V,        mods: Control|Shift, action: Paste            }
